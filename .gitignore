@@ -173,3 +173,6 @@ mysite_data.json
 # certificates
 cert.crt
 cert.key
+
+# ignore static root
+/static/

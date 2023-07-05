@@ -127,6 +127,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = BASE_DIR / "static"
 STATIC_URL = "static/"
 
 # Default primary key field type
@@ -142,7 +143,13 @@ MEDIA_ROOT = BASE_DIR / "media"
 CART_SESSION_ID = "cart"
 
 # email settings
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# Email server config
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # stripe settings
 STRIPE_API_VERSION = "2022-08-01"
