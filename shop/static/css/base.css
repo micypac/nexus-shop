@@ -297,10 +297,12 @@ ul.errorlist {
 
 .recommendations div {
   float: left;
+  padding: 10px;
 }
 
 .recommendations img {
-  width: 200px;
+  width: 120px;
+  height: 100px;
 }
 
 .recommendations p {
